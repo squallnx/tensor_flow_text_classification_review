@@ -1,5 +1,6 @@
 <html>
-
+<head>
+</head>
 <body>
     <div id="div-status">loading...</div>
     <div id="div-form">
@@ -153,12 +154,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"6rgrY":[function(require,module,exports) {
+})({"lkqk5":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "145c3e433f0cd2bafb02322823229821";
+module.bundle.HMR_BUNDLE_ID = "0bb20c72eeec2bea0d23f6127276844e";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -454,19 +455,23 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"1Agsn":[function(require,module,exports) {
+},{}],"6MwZg":[function(require,module,exports) {
 window.onFormSubmit = function (e) {
             e.preventDefault();
-            document.getElementById('div-result').innerText = '';
-            var result = predictComment(document.getElementById('txt-comment').value);
+
+            var divResult = document.getElementById('div-result');
+            var comment = document.getElementById('txt-comment').value;
+            var result = predictComment(comment);
+            
+            divResult.innerText = 'predicting...';
             result.then(function (res) {
-                document.getElementById('div-result').innerText = '' + res;
+                divResult.innerText = '' + res;
             }).catch(function (e) { });
+
             return false;
         }
-},{}]},["6rgrY","1Agsn"], "1Agsn", "parcelRequire6484")
+},{}]},["lkqk5","6MwZg"], "6MwZg", "parcelRequire6484")
 
 </script>
 </body>
-
 </html>
